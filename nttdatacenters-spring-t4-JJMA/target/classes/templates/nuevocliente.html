@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head xmlns:th="http///www.w3.org/1999/xhtml">
+<meta charset="utf-8">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+	<body>
+		<form class="p-3 form" th:action="@{/nuevocliente}"
+				th:object="${cliente}" method="get">
+				<div class="row">
+					<div class="col-sm">
+						<label for="nombreInput">Nombre</label> <input type="text"
+							class="form-control" id="nombreInput" placeholder="Nombre"
+							th:field="*{nombre}">
+					</div>
+					<div class="col-sm">
+						<label for="apellido1Input">Primer Apellido</label> <input type="text"
+							class="form-control" id="apellido1Input" placeholder="Apellido1"
+							th:field="*{primerApellido}">
+					</div>
+					<div class="col-sm">
+						<label for="apellido2Input">Segundo Apellido</label> <input type="text"
+							class="form-control" id="apellido2Input" placeholder="Apellido2"
+							th:field="*{segundoApellido}">
+					</div>
+					<div class="col-sm">
+						<label for="dniInput">DNI</label> <input type="text"
+							class="form-control" id="dniInput" placeholder="DNI"
+							th:field="*{DNI}">
+					</div>
+					<div class="col-sm">
+						<label for="fechaInput">Fecha de nacimiento</label> <input type="text"
+							class="form-control" id="fechaInput" placeholder="Fecha de nacimiento"
+							th:field="*{fechaNacimiento}">
+					</div>
+					
+				</div>
+				<button type="submit" class="btn btn-primary mt-3">Registrar
+					persona</button>
+				<a type="button" class="btn btn-primary mt-3" href="#"
+					onclick="history.back()">Volver</a>
+			</form>
+	</body>
+</html>	
